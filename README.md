@@ -1,3 +1,7 @@
+SEN210-USER INTERFACE PROGRAMMING
+
+
+
 # Arabia Explorer
 
 Arabia Explorer is a simple Flutter mobile application that helps users explore famous landmarks in Arab countries.
