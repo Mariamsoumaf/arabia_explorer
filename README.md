@@ -74,5 +74,4 @@ flutter run
 
 **Mariam Soumaf**
 
-Software Engineering Student  
-Istanbul Gelisim University
+
