@@ -1,58 +1,78 @@
-SEN210-USER INTERFACE PROGRAMMING
+# 🌍 Arabia Explorer
 
+Arabia Explorer is a Flutter mobile application that helps users discover famous landmarks across Arab countries. The application provides an interactive and user-friendly experience for exploring countries, viewing landmarks, reading detailed information, and managing a simple shopping cart simulation.
 
+## ✨ Features
 
-# Arabia Explorer
+- 🌍 Browse Arab countries
+- 🏛️ View famous landmarks for each country
+- 📖 Detailed information for every landmark
+- 🔲 GridView layout for countries and landmarks
+- 📂 Load data from a JSON file
+- 🛒 Add landmarks to a Cart
+- 🗑️ Remove landmarks from the Cart
+- 💬 Feedback screen
+- 🎨 Clean and responsive Material Design UI
 
-Arabia Explorer is a simple Flutter mobile application that helps users explore famous landmarks in Arab countries.
+## 🛠️ Technologies Used
 
-## Project Idea
-The application presents a list of Arab countries and displays their most popular tourist and historical landmarks.
-When the user selects a country, the app shows its landmarks, and when a landmark is selected, a details page appears with its image, location, and short description.
-
-The application also includes a simple feedback feature where the user can write an opinion about the selected landmark.
-
-## Features
-- Welcome screen
-- Countries screen
-- Landmarks screen for each country
-- Details screen for each landmark
-- Feedback screen
-- Local images using assets
-- Simple and clean Flutter UI
-
-## Countries Included
-- Syria
-- Egypt
-- Saudi Arabia
-- UAE
-- Lebanon
-
-## Technologies Used
 - Flutter
 - Dart
-- Material Design Widgets
-- Navigation between screens
-- Assets for local images
-- Form and validation for user feedback
+- Material Design
+- JSON
+- GridView
+- Navigator
+- Local State Management
 
-## App Structure
-- `lib/main.dart` → app entry point
-- `lib/models` → data models
-- `lib/data` → app data
-- `lib/screens` → application screens
-- `assets/images` → local images
+## 📂 Project Structure
 
-## Screens
+```
+lib/
+│── data/
+│── models/
+│── screens/
+│── main.dart
+
+assets/
+│── images/
+│── data/
+│    └── countries.json
+```
+
+## 🚀 How to Run
+
+1. Clone the repository.
+
+```bash
+git clone https://github.com/YOUR_USERNAME/arabia_explorer.git
+```
+
+2. Open the project folder.
+
+3. Install dependencies.
+
+```bash
+flutter pub get
+```
+
+4. Run the application.
+
+```bash
+flutter run
+```
+
+## 📱 Application Screens
+
 - Welcome Screen
 - Countries Screen
 - Landmarks Screen
 - Details Screen
+- Cart Screen
 - Feedback Screen
 
-## How to Run
-1. Open the project in VS Code or Android Studio.
-2. Run:
-  
-   flutter pub get
-   flutter run
+## 👩‍💻 Author
+
+**Mariam Soumaf**
+
+Software Engineering Student  
+Istanbul Gelisim University
