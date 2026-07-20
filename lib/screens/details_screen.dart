@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/landmark.dart';
+import '../data/app_data.dart';
 import 'feedback_screen.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -13,6 +14,21 @@ class DetailsScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(landmark.name),
         backgroundColor: Colors.blueGrey,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.add_shopping_cart),
+            tooltip: 'Add to Cart',
+            onPressed: () {
+              addToCart(landmark);
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text('${landmark.name} added to cart'),
+                  duration: const Duration(seconds: 1),
+                ),
+              );
+            },
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
