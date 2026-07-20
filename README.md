@@ -44,7 +44,7 @@ assets/
 1. Clone the repository.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/arabia_explorer.git
+git clone https://github.com/mariam_soumaf/arabia_explorer.git
 ```
 
 2. Open the project folder.
