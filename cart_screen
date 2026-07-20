@@ -1,0 +1,89 @@
+import 'package:flutter/material.dart';
+import '../data/app_data.dart';
+
+class CartScreen extends StatefulWidget {
+  const CartScreen({super.key});
+
+  @override
+  State<CartScreen> createState() => _CartScreenState();
+}
+
+class _CartScreenState extends State<CartScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Cart (${cartItems.length})'),
+        backgroundColor: Colors.blueGrey,
+      ),
+      backgroundColor: const Color(0xfff4e4cf),
+      body: cartItems.isEmpty
+          ? const Center(
+              child: Text(
+                'Your cart is empty.',
+                style: TextStyle(fontSize: 18),
+              ),
+            )
+          : ListView.builder(
+              padding: const EdgeInsets.all(16),
+              itemCount: cartItems.length,
+              itemBuilder: (context, index) {
+                final landmark = cartItems[index];
+
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 16),
+                  child: Card(
+                    elevation: 5,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.asset(
+                              landmark.image,
+                              width: 90,
+                              height: 70,
+                              fit: BoxFit.cover,
+                              errorBuilder: (context, error, stackTrace) {
+                                return Container(
+                                  width: 90,
+                                  height: 70,
+                                  color: Colors.grey[300],
+                                  child: const Icon(Icons.image_not_supported),
+                                );
+                              },
+                            ),
+                          ),
+                          const SizedBox(width: 16),
+                          Expanded(
+                            child: Text(
+                              landmark.name,
+                              style: const TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          IconButton(
+                            icon: const Icon(Icons.delete_outline, color: Colors.red),
+                            tooltip: 'Remove',
+                            onPressed: () {
+                              setState(() {
+                                cartItems.removeAt(index);
+                              });
+                            },
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                );
+              },
+            ),
+    );
+  }
+}
